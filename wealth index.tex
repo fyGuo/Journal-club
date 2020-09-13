@@ -1,0 +1,271 @@
+\documentclass[13pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\footnotesize}{\scriptsize}
+\captionsetup[table]{font=scriptsize}
+\setlength{\abovecaptionskip}{6pt} 
+\setlength{\belowcaptionskip}{-3pt}
+
+\renewcommand{\footnotesize}{\fontsize{9pt}{12pt}\selectfont}
+\usetheme{Madrid}
+\usepackage{booktabs}
+
+\usepackage[style=chem-rsc,backend=bibtex]{biblatex}
+\renewcommand*{\bibfont}{\tiny}
+\renewcommand*{\multicitedelim}{\iffootnote{\newline}{\addsemicolon\space}}
+\renewcommand{\bibfootnotewrapper}[1]{\bibsentence #1}
+\addbibresource{mybib.bib}
+\renewcommand{\footnotesize}{\tiny}
+
+
+
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs}
+\usecolortheme{beaver}
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\title[Wealth index ]{Measuring socio-economic status in LMIC}
+\subtitle{How to construct wealth index}
+\date{\today}
+\author{Fuyu Guo}
+\begin{document}
+
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Table of Contents}
+	\tableofcontents
+\end{frame}
+\section{Background}
+\begin{frame}
+	What is common to health research and policy intervention is that there is differential impact with respect to health health outcome or health service utilization based on socio-economic status (SES) or socio-economic position (SEP), which is always a synonym to SES.
+	\begin{block}{SES Wikipedia}
+		SES is an economic and sociological combined total measure of a person's work experience and of an individual's or family's economic and social position in relation to others. The household income, earners' education, and occupation are examined, as well as combined income, whereas for an individual's SES only their own attributes are assessed. However, SES is more commonly used to depict an economic difference in society as a whole.
+	\end{block}
+\end{frame}
+\section{Income}
+\begin{frame}
+	Income is the sum of all the wages, salaries, profits, interest payments, rents, and other forms of earnings received in a given period of time (wikipedia). Income could be used to measure the material aspect of SEP.
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{block}{HIC}
+				\begin{minipage}[c][0.65\textheight][c]{\linewidth}
+					\begin{itemize}
+					\item Formal income measuring system (e.g. through tax).
+					\item Limited sources of income, mostly through monetary system.
+					\item Less likely to vary across seasons.
+					\item Different interpretation in communist society or in countries with rapid development (China).
+					\end{itemize}
+				\end{minipage}
+			\end{block}
+		\end{column}
+		\begin{column}{0.45\textwidth}
+				\begin{block}{LMIC}
+					\begin{minipage}[c][0.65\textheight][c]{\linewidth}
+						\begin{itemize}
+					\item Similar to HIC in MICs like countries in South America.
+					\item Usually no official data in LICs.
+					\item Multiple sources of income. Income could be paid in the form of goods.
+					\item Self-employed, casual and seasonal labour problem.
+					\item Bidirectional relationship between income and health.
+						\end{itemize}
+					\end{minipage}
+				\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+\section{Consumption expenditure}
+\begin{frame}
+	\begin{itemize}
+		\item Consumption expenditure measures how income is used by a household what goods and services are purchased.
+		\item According to "permanent income hypothesis", consumption expenditure is more stable than the income.
+		\item Compared to the income, it is a long-term measurement of SEP, and thus is preferred.
+	\end{itemize}
+			\begin{block}{HIC}
+					\begin{itemize}
+						\item Macro data: Caluclated in the GDP.
+						\item Mico data: Household surveys and expenditure diaries.
+						\item Not a measurement of SEP in studies examing inequlities in health outcomes.
+					\end{itemize}
+			\end{block}
+\end{frame}
+\begin{frame}
+			\begin{block}{LMIC}
+					\begin{itemize}
+					\item Difficult to use expenditure diaries.
+					\item Long list of potential expenditure items are given to respondent, very time-consuming.
+					\item Including home-produced products.
+					\item Misreport or recall bias.
+					\item Seasonality for rural households.
+					\item What sorts of expenditure should be included. Debates on health consumption.
+					\end{itemize}
+			\end{block}
+\end{frame}
+\section{Wealth Index}
+\begin{frame}
+	\begin{itemize}
+		\item Because of all the difficulties to use income or consumption expenditure in LMICs. An asset-based wealth-index was firsly introduced by DHS, and then by the World Bank
+		\item The main idea is that instead  of measuring economic indicators, ownership of a range of durable assets and access to basic services (e.g. electricty supply, sanitation supply) are used to assess a household or a individual SEP
+		\item The arising problem is how to determine one's SEP through a amount of different variables
+	\end{itemize}
+\end{frame}
+\subsection{PCA}
+\begin{frame}
+	\begin{itemize}
+		\item The main aim of PCA is to reduce the number of dimensions
+		\item suppose we have $n$  correlated variables from $ X_1 $ to $ X_n$, through PCA we will get
+		\[ PC_1=a_{11}X_1+A_{12}X_2+\cdots+a_{1n}X_n \]
+		\[ PC_m=a_{m1}X_1+A_{m2}X_2+\cdots+a_{mn}X_n \]
+	where $PC$ includes $m$ uncorrelated componets in which $PC_1$ explains the largest possible amount of variation in the orginial data. $a_{mn}$ represents the weight for the $m$ th principal component and the $n$ th variable. 
+		\item The higher the degree of correlation among the original data, the fewer components are required to capture the common information	
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{figure}[!ht]
+		\includegraphics[width=10cm]{PCA1.jpg}
+	\end{figure}
+\end{frame}
+\subsection{Concerns}
+\begin{frame}
+	Selecting variables into PCA is the major concern.
+	\begin{itemize}
+		\item Ownership of real estate (e.g.farmland, house).
+		\item Ownership of durable assets (e.g. car, refrigerator, television).
+		\item Infrastructure (e.g. sanitation facility and source of water).
+		\item Housing characteristics (e.g. number of rooms and building material).
+	\end{itemize}
+	Generally speaking,
+	\begin{itemize}
+		\item PCA works better on correlated variables.
+		\item The distribution of variables are expected to vary across households.
+		\item Variables with low standard deviation carry low weights from the PCA.
+		\item Unequally distributed variables are given large weights.
+		\item Taking outcome variables into the PCA always leads to larger inequality among households (e.g. for the water saniation study).   
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	In PCA, we aim to avoid \textbf{Clumping} and \textbf{Truncation}
+	\begin{itemize}
+		\item Clumping or clustering is	described as households being grouped together in a small number of distinct clusters.
+		\item Truncation implies a more even distribution of SES, but spread over a narrow range, making differentiating between socio-economic groups difficult.
+	\end{itemize}
+	Solutions to those two potential problems
+	\begin{itemize}
+		\item Including more variables.
+		\item Using continuous variables instead of binary variables.
+	\end{itemize}
+\end{frame}
+\subsection{An example using DHS data}
+\begin{frame}
+	Example from DHS in Brazil and Ethiopia
+	\begin{figure}[!ht]
+		\includegraphics[width=\linewidth]{PCA2.jpg}
+	\end{figure}
+\end{frame}
+\begin{frame}
+		\begin{itemize}
+			\item Clumping or truncation is a problem in rural Ethiopia and urban Brazil.
+			\item Factor score is the weight for the orginal variable.
+		\begin{block}{technical points}
+		\begin{itemize}
+			\item Categorical varaibles are coverted into binary variables.
+			\item Similar variables with low frequencies are combined.
+			\item Excluding or imputating missing values, for low SEP households are more likely to respond with missing values.
+			\item Standardizing or scaling the orginal variables to remove the units.
+		\end{itemize}
+		\end{block}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item 	After summing all the variables multipling by the factor score, we will get the first $PC$ which is the \textit{\textbf{"wealth-index"}}.
+		\item In this study the first $PC$ only accounted for 12\% to 27\% variation.
+		\item Higher order of $PC$ was found not associated with the SEP.
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	Since, the absolute value of the wealth-index is hard to interprate, researchers usually use different cut-offs to differentiate households into catergories based on their wealth-index.
+		\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{block}{Poor, middle and rich}
+				\begin{minipage}[c][0.4\textheight][c]{\linewidth}
+					\begin{itemize}
+						\item 1\%-40\% Poor
+						\item 41\%-80\% Middle
+						\item 81\%-100\% Rich
+					\end{itemize}
+				\end{minipage}
+			\end{block}
+		\end{column}
+		\begin{column}{0.45\textwidth}
+			\begin{block}{5 quantiles}
+				\begin{minipage}[c][0.4\textheight][c]{\linewidth}
+					\begin{itemize}
+						\item 1\%-20\% Poorest 
+						\item 21\%-40\% Second
+						\item 41\%-60\% Middle
+						\item 61\%-80\% Fourth
+						\item 81\%-100\% Richest
+					\end{itemize}
+				\end{minipage}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+\begin{frame}
+	\begin{figure}[!ht]
+		\includegraphics[width=\linewidth]{PCA3.jpg}
+	\end{figure}
+\end{frame}
+\begin{frame}
+	For the wealth-index distribution, the wealth-index for Urban Brazil is skewed to left. For the Rural Ethiopia, the wealth-index is skewed to the right.
+	\begin{figure}[!ht]
+		\includegraphics[width=8.5cm, height=7.5cm]{PCA4.jpg}
+	\end{figure}
+\end{frame}
+\begin{frame}
+	Using the cluster analysis on the wealth-index to group the households into 3 groups
+	The ideal shares of household in poor, middle and rich groups are 40\%, 40\%, 20\% 
+	\begin{figure}[!ht]
+		\includegraphics[width=\linewidth]{PCA5.jpg}
+	\end{figure}
+\end{frame}
+\begin{frame}
+	\begin{block}{limitations}
+		\begin{itemize}
+			\item Only using binary variables will violate the assumption behand the PCA.
+			\item The finer catergory of assets are usually ignored (e.g. color television VS black and white television)
+			\item A measure of relative rather  than absolute SEP, lacking comparability between countries or time.
+			\item Ignoring Different types of assets between rural and urban (e.g. more access to electricty supply in the urban; more farmland in the rural).
+			\item Usually a measuremnt on the household or family level.
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item Wealth-index is a method trying to differentiate households in different SEP. Alternative methods includes cluster analysis and factor analysis.
+		\item Wealth-index was used to measure early-life SEP when other indicators were not available. The assets used in the PCA are very different between HIC and LMIC.
+	\end{itemize}
+\end{frame}
+\section{Reference}
+\begin{frame}
+	\begin{itemize}
+		\item Howe, L. D., Galobardes, B., Matijasevich, A., Gordon, D., Johnston, D., Onwujekwe, O., ... \& Hargreaves, J. R. (2012). Measuring socio-economic position for epidemiological studies in low-and middle-income countries: a methods of measurement in epidemiology paper. International journal of epidemiology, 41(3), 871-886.
+		\item Vyas, S., \& Kumaranayake, L. (2006). Constructing socio-economic status indices: how to use principal components analysis. Health policy and planning, 21(6), 459-468.
+	\end{itemize}
+\end{frame}
+\end{document}
