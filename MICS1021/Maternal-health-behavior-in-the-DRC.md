@@ -85,7 +85,7 @@ MICS is a household survey, it documented two levels information: household and 
 It contains several separate datasets in its orginal design  
 We used household and individual women datasets. 
 
- <img src="p2.JPG" width="70%",height = "70%" />
+ <img src="p2.JPG" width="70%" height = "70%" />
  
   
 ## Household dataset
