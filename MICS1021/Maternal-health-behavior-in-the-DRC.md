@@ -202,7 +202,7 @@ Below variables are not mentioned in the survey, but are cacluated and provided 
  
  Questions about these tree questions were asked for women who gave live birth in the last two years
  
- <div style="background-color:yellow;"> ***PNC***  definition and questions are questionable</div>
+ <div style="background-color:yellow;"> *PNC*  definition and questions are questionable</div>
 
 
 ## Project 1 Maternal seeking behavior in MICS6
