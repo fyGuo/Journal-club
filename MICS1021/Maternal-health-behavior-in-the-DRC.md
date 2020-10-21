@@ -415,7 +415,7 @@ table(mics6$MN19A)
 
 ## 
 <center>
-Github link [https://github.com/fyGuo/MICS4-6]
+Github link <https://github.com/fyGuo/MICS4-6>.
 
 
 <div  style="width: 100%;height: 500px;display: block;line-height: 500px;text-align: center; font-size: 600%;" >Thanks</div>
