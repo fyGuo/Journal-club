@@ -4,12 +4,22 @@ author: "Fuyu Guo"
 date: "October 20, 2020"
 output:
   slidy_presentation:
-          theme: flatly
-          keep_md: yes
+    keep_md: yes
+    theme: flatly
+  ioslides_presentation: default
 subtitle: UNCIEF MICS data
 ---
 
+
+
+## MICS: Multiple Indicator Cluster Surveys
 <style type="text/css">
+
+.highlight {
+  background-color: lightpink;
+  border: 3px solid red;
+  font-weight: bold;
+}
 
 .center {
   display: block;
@@ -17,9 +27,6 @@ subtitle: UNCIEF MICS data
   margin-right: auto;
   width: 50%;
 }
-
-
-
 
 tr:nth-child(even){background-color: #f2f2f2}
 
@@ -74,37 +81,40 @@ pre { /* Code block - determines code spacing between lines */
 </style>
 
 
-## MICS: Multiple Indicator Cluster Surveys
- - Aim: Collect and analyzing data in order to fill data gaps for monitoring the situation of children and women
+ - Aim: To collect and analyze data in order to fill data gaps for monitoring the situation of children and women
  - Rounds: We used MICS6 in 2017-2018 in the DRC, but there are 6 rounds avaliable on MICS website <http://mics.unicef.org/>. 
  
  <img src="p1.JPG" width="100%" />
 
 ## Dataset Structure
-MICS is a household survey, it documented two levels information: household and individual.  
-It contains several separate datasets in its orginal design  
+MICS is a household survey, includes two levels information: 
+
+- Household and household head information  
+- Individual man, woman and children  
+
 We used household and individual women datasets. 
 
- <img src="p2.JPG" width="70%" height = "70%" />
+ <img src="p2.JPG" width="70%",height = "70%" />
  
+## Dataset Structure
   
-## Household dataset
+### Household dataset
 
-- Cluster number and household number
+- Cluster number (PSU) and household number
 - Survey year and month
 - Regions: 26 provinces in the DRC after 2015, but 11 provinces before
 - Urban/Rural
 - Household head demographic characteristics.  
 
-## Inidividual women dataset
+### Inidividual women dataset
 
-- Cluster number and household number
+- Cluster number (PSU) and household number
 - Survey year and month
 - Demographic characteristics
-- Maternal health seeking behavior
-- HIV and modern contrceptual
+- Maternal health seeking behavior (only for women giving birth in last two years)
+- HIV and modern contraceptive methods
 
-## Inidividual women dataset
+## Dataset Structure
 
 
 ```r
@@ -157,23 +167,29 @@ dim(wm)
 [1] 13235    27
 ```
 
-##
 
 ```r
 hh <- mutate(hh, hID = paste(hh$HH1, hh$HH2, sep="_"))
 wm <- mutate(wm, hID = paste(wm$WM1, wm$WM2, sep="_"))
+```
+
+```{.r .highlight}
 df <- merge(hh, wm, by = "hID")
+```
+
+
+```r
 head(df[, c("hID","HH1","HH2","WM1", "WM2")])
 ```
 
 ```
-    hID HH1 HH2 WM1 WM2
-1   1_1   1   1   1   1
-2  1_11   1  11   1  11
-3  1_11   1  11   1  11
-4 1_118   1 118   1 118
-5 1_127   1 127   1 127
-6 1_127   1 127   1 127
+##     hID HH1 HH2 WM1 WM2
+## 1   1_1   1   1   1   1
+## 2  1_11   1  11   1  11
+## 3  1_11   1  11   1  11
+## 4 1_118   1 118   1 118
+## 5 1_127   1 127   1 127
+## 6 1_127   1 127   1 127
 ```
 
 ```r
@@ -181,30 +197,32 @@ dim(df)
 ```
 
 ```
-[1] 13235    41
+## [1] 13235    41
 ```
 
 ## Special variable
-Below variables are not mentioned in the survey, but are cacluated and provided in the dataset
+Below variables are not mentioned in the survey, but are calculated and provided in the dataset
 
 - welevel: women's highest education level 
 - helevel: houshold head's highest education level
-- windex5: wealth index5
+- windex5: wealth index5 [description](https://github.com/fyGuo/Journal-club/blob/master/wealth%20index.pdf)
 - wmweight: sampling weight of individual women 
 
 ## Project 1 Maternal seeking behavior in MICS6
  We aimed to study maternal seeking behavio (MHSB) in the DRC.  
  MHSB includes:  
  
- - Antenatal care  
+ - Antenatal care (ANC) 
  - Delivery care  
- - Postnatal care  
+ - Postnatal care  (PNC)  
  
- Questions about these tree questions were asked for women who gave live birth in the last two years
- ***PNC***  definition and questions are questionable
+ Questions about these tree questions were answered by women who gave live birth in the last two years
+ 
+ <div style="background-color:yellow;"> ***PNC*** : We need to be very careful on its definition and questions </div>
 
 
-## Project 1 Maternal seeking behavior in MICS6
+## Project 1 Maternal health seeking behavior in MICS6
+We aimed to study the maternal health seeking behaivor of women in MICS6.  
 By conducting a k-modes cluster analysis, we categorized women into three groups:
 
 - Highly-use Group
@@ -261,14 +279,19 @@ By conducting a k-modes cluster analysis, we categorized women into three groups
 </tbody>
 </table>
 
-## Project 1 Maternal seeking behavior in MICS6
+## Project 1 Maternal health seeking behavior in MICS6
 
+<center>
 <img src="p3.JPG" width="100%" >
-
+<figcaption>Percentage of women in three groups in the DRC</figcaption>
+</center>
 
 ## Project 1 Maternal seeking behavior in MICS6
 
-<img src="p4.JPG" width="65%" height = "65%" class = "center" >
+<center>
+<img src="p4.JPG" width="80%" height = "65%" class = "center" >
+<figcaption> Geographic distribution of three groups in the DRC</figcaption>
+</center>
 
 ## Project 1 Maternal seeking behavior in MICS6
 
@@ -415,7 +438,7 @@ table(mics6$MN19A)
 
 ## 
 <center>
-Github link https://github.com/fyGuo/MICS4-6.
+Github link <https://github.com/fyGuo/MICS4-6>
 
 
 <div  style="width: 100%;height: 500px;display: block;line-height: 500px;text-align: center; font-size: 600%;" >Thanks</div>
