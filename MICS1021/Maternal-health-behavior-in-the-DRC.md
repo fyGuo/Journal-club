@@ -9,10 +9,6 @@ output:
   ioslides_presentation: default
 subtitle: UNCIEF MICS data
 ---
-
-
-
-## MICS: Multiple Indicator Cluster Surveys
 <style type="text/css">
 
 .highlight {
@@ -79,6 +75,11 @@ pre { /* Code block - determines code spacing between lines */
     font-size: 20px;
 }
 </style>
+
+
+
+## MICS: Multiple Indicator Cluster Surveys
+
 
 
  - Aim: To collect and analyze data in order to fill data gaps for monitoring the situation of children and women
