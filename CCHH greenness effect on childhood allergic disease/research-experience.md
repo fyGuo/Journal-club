@@ -38,7 +38,7 @@ China, Children, Homes and Health (CCHH) project
 
 - However, the dataset is messy.
 
-![CCHH Dataset](D:\Journal club\research experience\Messy CCHH.JPG)
+![CCHH Dataset](Messy CCHH.JPG)
 
 - For the children health section, the questionnaire was designed in accordance to the protocols of International Study of Asthma and Allergies in Childhood (ISAAC). 
 - We studied the greenness's health effect on childhood allergic diseases and symptoms.
@@ -130,11 +130,11 @@ Adjusted for standardized PM2.5 concentration, standardized temperature, age, ge
 
 ## Subgroup Analysis
 
-![Subgroup Analysis](D:\Journal club\research experience\subgroup_analysis.JPG)
+![Subgroup Analysis](subgroup_analysis.JPG)
 
 
 ## Non-linear relationship
-![Non-linear dose-response relationship](D:\Journal club\research experience\dose-response.png)  
+![Non-linear dose-response relationship](dose-response.png)  
 
  Notes: Generalized additive model 
 
