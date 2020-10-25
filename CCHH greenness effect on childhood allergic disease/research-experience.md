@@ -56,7 +56,7 @@ In the past 12 months, has your kid had a problem with sneezing or a runny or bl
 
 - We got the enviroment information based on the ***kintergardens'*** address
 1. Greenness (NDVI): Half-Monthly data
-2. PM_2.5: Monthly data
+2. PM<sub>2.5</sub>  : Monthly data
 3. Temperature: Monthly data
 
 - We used the annual average level of enviroment information corresponding to the date of questionnaire completion of each child, either in 2010 or 2011
@@ -67,8 +67,8 @@ In the past 12 months, has your kid had a problem with sneezing or a runny or bl
 | Variable         | Chongqing (N=53) | Changsha (N=35) | Nanjing (N=21) | Shanghai (N=61) | Taiyuan (N=10) | Urumqi (N=14) |
 |------------------|------------------|-----------------|----------------|-----------------|----------------|---------------|
 | NDVI             | 0.19   | 0.18     | 0.18    | 0.20     | 0.19    | 0.18  |
-| PM~2.5~          | 83.68  | 95.27    | 78.63   | 64.90    | 94.33   | 82.84 |
-| T ($^{\circ}$C)     | 18.33  | 17.87    | 15.86   | 16.98    | 10.46   | 6.76  |
+| PM<sub>2.5</sub>         | 83.68  | 95.27    | 78.63   | 64.90    | 94.33   | 82.84 |
+| T & deg; C     | 18.33  | 17.87    | 15.86   | 16.98    | 10.46   | 6.76  |
 <center> The estimated annual average levels of environment inforamtion in each city </center>
 Notes: N represents the number of kintergardens in the city
 
