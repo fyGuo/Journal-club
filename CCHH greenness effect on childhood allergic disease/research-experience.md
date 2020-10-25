@@ -56,7 +56,7 @@ In the past 12 months, has your kid had a problem with sneezing or a runny or bl
 
 - We got the enviroment information based on the ***kintergardens'*** address
 1. Greenness (NDVI): Half-Monthly data
-2. PM~2.5~: Monthly data
+2. PM_2.5: Monthly data
 3. Temperature: Monthly data
 
 - We used the annual average level of enviroment information corresponding to the date of questionnaire completion of each child, either in 2010 or 2011
