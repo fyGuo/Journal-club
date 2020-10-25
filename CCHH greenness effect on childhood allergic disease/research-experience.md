@@ -40,7 +40,7 @@ China, Children, Homes and Health (CCHH) project
 - For the children health section, the questionnaire was designed in accordance to the protocols of International Study of Asthma and Allergies in Childhood (ISAAC). 
 - We studied the greenness's health effect on childhood allergic diseases and symptoms.
 
-![CCHH Dataset](Messy CCHH.JPG)
+![CCHH Dataset](Messy_CCHH.JPG)
 
 ## Variables
 
