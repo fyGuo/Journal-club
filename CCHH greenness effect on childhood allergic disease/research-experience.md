@@ -37,11 +37,10 @@ China, Children, Homes and Health (CCHH) project
 ## Background
 
 - However, the dataset is messy.
-
-![CCHH Dataset](Messy CCHH.JPG)
-
 - For the children health section, the questionnaire was designed in accordance to the protocols of International Study of Asthma and Allergies in Childhood (ISAAC). 
 - We studied the greenness's health effect on childhood allergic diseases and symptoms.
+
+![CCHH Dataset](Messy CCHH.JPG)
 
 ## Variables
 
@@ -68,7 +67,7 @@ In the past 12 months, has your kid had a problem with sneezing or a runny or bl
 |------------------|------------------|-----------------|----------------|-----------------|----------------|---------------|
 | NDVI             | 0.19   | 0.18     | 0.18    | 0.20     | 0.19    | 0.18  |
 | PM<sub>2.5</sub>         | 83.68  | 95.27    | 78.63   | 64.90    | 94.33   | 82.84 |
-| T & deg; C     | 18.33  | 17.87    | 15.86   | 16.98    | 10.46   | 6.76  |
+| T &deg; C     | 18.33  | 17.87    | 15.86   | 16.98    | 10.46   | 6.76  |
 <center> The estimated annual average levels of environment inforamtion in each city </center>
 Notes: N represents the number of kintergardens in the city
 
