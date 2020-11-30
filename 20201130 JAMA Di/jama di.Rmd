@@ -86,4 +86,5 @@ $Z = \frac{RR_{male} - RR_{female}}{\sqrt{(se(RR_{male})^2 - se(RR_{female})^2)}
 In the US Medicare population from 2000 to 2012, short-term exposures to PM$_{2.5}$ and warm-season ozone were significantly associated with increased risk of mortality. This risk occurred at levels below current national air quality standards, suggesting that these standards may need to be reevaluated.
 
 # 
-Thanks!
+Thanks!  
+[Today Slides and Articles](https://github.com/fyGuo/Journal-club/tree/master/20201130%20JAMA%20Di)
