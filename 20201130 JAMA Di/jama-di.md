@@ -12,9 +12,7 @@ output:
   ioslides_presentation: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+
 
 # Background
 
